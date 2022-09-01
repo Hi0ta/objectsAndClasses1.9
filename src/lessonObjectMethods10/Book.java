@@ -50,6 +50,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "название книги: " + this.titleBook + this.author + ", год выпуска: " + this.yearOfPublication;
+        return "" + this.titleBook + this.author + ": " + this.yearOfPublication;
     }
 }
