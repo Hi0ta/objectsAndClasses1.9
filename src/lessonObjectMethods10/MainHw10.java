@@ -1,7 +1,5 @@
 package lessonObjectMethods10;
-
 import java.util.Arrays;
-
 public class MainHw10 {
 
     private static Book[] getArrlibrary(Book[] arrlibrary, Book nextBook) {
@@ -17,37 +15,37 @@ public class MainHw10 {
     }
 
     public static void main(String[] args) {
-
-
-        Author author1 = new Author("Лев", "Толстой");
-        Book book1 = new Book("Война и мир", author1, 2016);
-
-        Author author2 = new Author("Михаил", "Булгаков");
-        Book book2 = new Book("Мастер и Маргарита", author2, 2016);
-
-        book2.setYearOfPublication(2020);
-
         Book[] arrlibrary = new Book[5];
-        arrlibrary[0] = book1;
-        arrlibrary[1] = book2;
         Book nextBook = new Book(null, null, 0);
+        Author nextAuthor = new Author(null, null);
 
-        Author author3 = new Author("Макс", "Фрай");
-        Book book3 = new Book("Чужак", author3, 1996);
-        nextBook = book3;
+        nextAuthor = new Author("Лев", "Толстой");
+        nextBook = new Book("Война и мир", nextAuthor, 2016);
         getArrlibrary(arrlibrary, nextBook);
 
-        Author author4 = new Author("Макс", "Фрай");
-        Book book4 = new Book("Чужак", author4, 1996);
-        book4.setYearOfPublication(2019);
-        nextBook = book4;
+        nextAuthor = new Author("Михаил", "Булгаков");
+        nextBook = new Book("Мастер и Маргарита", nextAuthor, 2016);
+        getArrlibrary(arrlibrary, nextBook);
+        nextBook.setYearOfPublication(2020);
+
+        //Book[] arrlibrary = new Book[5];
+        //arrlibrary[0] = book1;
+        //arrlibrary[1] = book2;
+        //Book nextBook = new Book(null, null, 0);
+
+
+        nextAuthor = new Author("Макс", "Фрай");
+        nextBook = new Book("Чужак", nextAuthor, 1996);
         getArrlibrary(arrlibrary, nextBook);
 
-        Author author5 = new Author("Макс", "Фрай");
-        Book book5 = new Book("Дворы", author5, 2022);
-        nextBook = book5;
+        nextAuthor = new Author("Макс", "Фрай");
+        nextBook = new Book("Чужак", nextAuthor, 1996);
+        nextBook.setYearOfPublication(2019);
         getArrlibrary(arrlibrary, nextBook);
 
+        nextAuthor = new Author("Макс", "Фрай");
+        nextBook = new Book("Дворы", nextAuthor, 2022);
+        getArrlibrary(arrlibrary, nextBook);
 
         System.out.println(Arrays.toString(arrlibrary));
 
